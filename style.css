@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bruno — Data & AI Analyst</title>
+  <meta name="description" content="Bruno — Data & AI Analyst, Sales Operations. Portfolio." />
+  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)" />
+  <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin />
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;600;800;900&display=swap)" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="loading">
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="loader-box">
+      <div class="loader-label"><span data-i18n="loading">Loading data</span><span id="loaderPct">0%</span></div>
+      <div class="bar"><div id="loaderFill"></div></div>
+    </div>
+  </div>
+
+  <canvas id="stars"></canvas>
+  <div id="progress"></div>
+
+  <!-- Header -->
+  <header class="nav glass">
+    <a href="#home" class="brand" aria-label="Home">
+      <canvas id="logo" width="88" height="88"></canvas>
+      <span>Bruno</span>
+    </a>
+    <nav class="links">
+      <a href="#experience" data-i18n="nav.exp"></a>
+      <a href="#value" data-i18n="nav.value"></a>
+      <a href="#skills" data-i18n="nav.skills"></a>
+      <a href="#projects" data-i18n="nav.projects"></a>
+      <a href="#contact" data-i18n="nav.contact"></a>
+    </nav>
+    <div class="controls">
+      <div class="accent" aria-label="Accent color">
+        <button class="sw" data-c="#00a8e8" style="--c:#00a8e8"></button>
+        <button class="sw" data-c="#2ecc71" style="--c:#2ecc71"></button>
+        <button class="sw" data-c="#8e5cff" style="--c:#8e5cff"></button>
+        <button class="sw" data-c="#ff7a45" style="--c:#ff7a45"></button>
+        <label class="sw custom" title="Custom"><input type="color" id="accentPicker" value="#00a8e8" /></label>
+      </div>
+      <button id="langBtn" class="pill" aria-label="Switch language">FR</button>
+      <button id="themeBtn" class="theme-toggle" aria-label="Toggle theme">
+        <span class="ico sun">☀</span><span class="ico moon">☾</span><span class="knob"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <p class="eyebrow reveal" data-i18n="hero.eyebrow"></p>
+      <h1 class="typed-wrap"><span id="typed"></span><span class="caret">_</span></h1>
+      <p class="lead reveal" data-i18n="hero.lead"></p>
+      <div class="cta reveal">
+        <a href="#projects" class="btn primary" data-i18n="hero.cta1"></a>
+        <a href="#contact" class="btn glass" data-i18n="hero.cta2"></a>
+      </div>
+      <a href="#experience" class="scroll-hint" aria-label="Scroll"><span></span></a>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="sec-head reveal">
+        <span class="kicker" data-i18n="exp.kicker"></span>
+        <h2 data-i18n="exp.title"></h2>
+        <p class="hint" data-i18n="exp.hint"></p>
+      </div>
+      <div id="timeline" class="timeline"></div>
+    </section>
+
+    <!-- Value -->
+    <section id="value" class="section">
+      <div class="sec-head reveal">
+        <span class="kicker" data-i18n="value.kicker"></span>
+        <h2 data-i18n="value.title"></h2>
+      </div>
+      <div id="values" class="values"></div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <div class="sec-head reveal">
+        <span class="kicker" data-i18n="edu.kicker"></span>
+        <h2 data-i18n="edu.title"></h2>
+      </div>
+      <div class="edu glass reveal">
+        <span class="edu-tag" data-i18n="edu.tag"></span>
+        <h3 data-i18n="edu.degree"></h3>
+        <p data-i18n="edu.school"></p>
+      </div>
+    </section>
+
+    <!-- Technical skills -->
+    <section id="skills" class="section">
+      <div class="sec-head reveal">
+        <span class="kicker" data-i18n="skills.kicker"></span>
+        <h2 data-i18n="skills.title"></h2>
+        <p class="hint" data-i18n="skills.hint"></p>
+      </div>
+      <div id="periodic" class="periodic"></div>
+      <div id="legend" class="legend reveal"></div>
+    </section>
+
+    <!-- Soft skills -->
+    <section id="soft" class="section">
+      <div class="sec-head reveal">
+        <span class="kicker" data-i18n="soft.kicker"></span>
+        <h2 data-i18n="soft.title"></h2>
+        <p class="hint" data-i18n="soft.hint"></p>
+      </div>
+      <div id="radar" class="radar glass reveal"></div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="sec-head reveal">
+        <span class="kicker" data-i18n="proj.kicker"></span>
+        <h2 data-i18n="proj.title"></h2>
+      </div>
+      <div id="projectGrid" class="projects"></div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <h2 class="reveal" data-i18n="contact.title"></h2>
+      <p class="lead reveal" data-i18n="contact.text"></p>
+      <div class="cta reveal">
+        <a href="mailto:bruno@example.com" class="btn primary">bruno@example.com</a>
+        <a href="[linkedin.com](https://www.linkedin.com/in/YOUR-PROFILE)" target="_blank" rel="noopener" class="btn glass">LinkedIn ↗</a>
+      </div>
+      <footer>© <span id="year"></span> Bruno</footer>
+    </section>
+  </main>
+
+  <!-- Pop-up window -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="window glass" role="dialog" aria-modal="true">
+      <div class="titlebar">
+        <span class="dots"><i></i><i></i><i></i></span>
+        <span id="modalTitle"></span>
+        <button id="modalClose" aria-label="Close">✕</button>
+      </div>
+      <div id="modalBody" class="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
